@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--移动端适配-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>float实现九宫格布局</title>
+  <style>
+    body,div{
+      margin: 0;
+      padding: 0;
+    }
+    #app{
+      width: 100%;
+      height: 100%;
+    }
+    #app::after{
+      display: block;
+      content: '';
+      clear: both;
+    }
+    .box{
+      float: left;
+      width: 30%;
+      height: 30vw;
+      /*通过视图宽度设置高度单位来实现正方形---兼容性*/
+      /*padding-bottom: 30%;
+      height: 0;*/
+      /*通过padding设置内容长度，并设置高度为0实现形状不变---max-height失效*/
+      margin-left: 2.5%;
+      margin-top: 2.5%;
+      background-color: #fea500;
+      border-radius: 8%;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+  </div>
+</body>
+</html>
