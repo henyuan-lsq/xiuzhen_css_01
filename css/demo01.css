@@ -2,9 +2,10 @@ body,div{
   margin: 0;
   padding: 0;
 }
-.app,div{
+.app{
   width: 100%;
   height: 100%;
+  margin-bottom: 2.5%;
 }
 .app::after{
   display: block;
@@ -15,12 +16,7 @@ body,div{
   float: left;
   width: 30%;
   height: 30vw;
-  /*通过视图宽度设置高度单位来实现正方形---兼容性*/
-  /*padding-bottom: 30%;
-  height: 0;*/
-  /*通过padding设置内容长度，并设置高度为0实现形状不变---max-height失效*/
-  margin-left: 2.5%;
-  margin-top: 2.5%;
-  background-color: #fea500;
+  margin: 2.5% 0% 0% 2.5%;
   border-radius: 8%;
+  background-color: #fea500;
 }
